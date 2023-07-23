@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+}
+
+thead th,
+tfoot td {
+  background-color: #427fef;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #eef7ff;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px;
+  font-weight: bold;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+tr {
+  border-bottom: 1px solid #c4dcf3;
+}
+
+.box {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: tomato;
+  box-shadow: 10px 10px 2px lightgrey;
+}

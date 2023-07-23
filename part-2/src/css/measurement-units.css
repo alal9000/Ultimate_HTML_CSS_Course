@@ -1,0 +1,16 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* font-size: 1.6rem; */
+  /* margin: 10px; */
+}
+
+.box {
+  /* font-size: 20px; */
+  width: 15rem;
+  height: 100vh;
+  background-color: gold;
+  border-top: 5px solid red;
+}

@@ -1,0 +1,13 @@
+:root {
+  --color-primary: #ffdd36;
+  --border-szie: 10px;
+  --border-radius: 10px;
+}
+
+.one {
+  background: var(--color-primary);
+}
+
+.one {
+  background: var(--color-primary);
+}

@@ -1,0 +1,87 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signin-form - Aaron</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="#" method="post">
+      <div class="form-group">
+        <h1>Please sign in</h1>
+        <input type="email" placeholder="Email address" id="email" autofocus />
+        <input type="password" placeholder="Password" id="password" />
+        <div class="remember">
+          <label for="remember">Remember me</label>
+          <input type="checkbox" id="remember" />
+        </div>
+        <button type="submit">Sign in</button>
+        <p>Copyright &copy 2020</p>
+      </div>
+    </form>
+  </body>
+</html>
+
+
+CSS:
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  height: 100vh;
+  justify-content: center;
+  line-height: 1.5;
+  text-align: center;
+}
+
+form {
+  width: 300px;
+}
+
+input[type="email"],
+input[type="password"] {
+  margin: 0.2rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 4px #b9d3fa;
+}
+
+button {
+  background: #0d6efd;
+  color: #fff;
+  border: 0;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  /* margin-top: 0.6rem; */
+}
+
+p {
+  color: rgb(150, 145, 145);
+}
+
+.remember {
+  margin: 1rem;
+}

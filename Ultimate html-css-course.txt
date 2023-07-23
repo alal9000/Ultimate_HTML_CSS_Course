@@ -1,0 +1,362 @@
+need to do the hero image optimisation
+
+upto: drop down lists
+
+-change name
+-data officer
+-search engines
+-litigion
+
+-html provides the skeleton or building blocks of our web page, css takes care of the presentation while js provides functionality and interactivity
+-client and server communicate through http protocol which defines the format and rules for data exchange, http is a textual language but various types of content can be
+exchanegd like html, css and js files.
+-when the browser reads the html doc returned from the server it discovers other resoruces like images, fonts etc, each resource has its own url or address so the borwser
+sends seperate http requests to the server to fetch those resources, many of these requests are sent in parallel
+-rendering a document means displaying it
+-the http response returned from the server contains an html document, the broswer reads the html doc to contruct the document object model and renders the page.
+-the dom is a model that represents the objects or elements in our html doc, these are the building blocks of our page, things like parargraphs, images, headlines etc
+-if we set border-radius to a value that is half of the width of an image we will get a round image
+-class is short for classification
+-viewport is the visible area of a webpage
+-we usually use utf-8 character set which can represent all characters in the world
+-styling should be done in css not in html
+-a link is an address but a hyperlink is the element that a user can click on to navigate to that target page
+-for setting image sizes, we often dont have to set the height, only the width as the browser will automatically set the height based on the aspect ratio
+-in html the presence of a boolean attribute represents the true value and its absence represents the false value
+-the audio element has the same boolean attributes as video like loop, autoplay, controls
+-for tables we can have one or more cells in a tr or table row which are either data cells or header cells
+-we want to write semantic html: semantic means meaningful, it is good for SEO
+-styles weight: inline > embedded > external
+-seperation of concerns is important concept in computer science: we want to have differnt modules for diffrent concerns. So seperate html and css. Inline and embedded stylesheets violates this principal
+-use a space for decendant selectors. They apply to any elements of that type in the parent element. So children, grandchildren etc ie: #products p { color: orange; } - so all the p elements inside the products id element
+-types of selectors: basic (class, id, element), relational (descendant, direct child), psudeo (before, after)
+-use > for direct child relational selector: ie: #products > p { color: orange; }
+-use + for sibling relational selector: ie: #products + p { color: orange; } (next element after products)
+-use ~ for general siblings so all elements of thast type after parent element ie: #products ~ p { color: orange; }
+-be aware that relational selectors can be fragile as if we move elements around our styles will break. Its fine to use them if we confident our elements wont be moving around
+-also relational selectors can be slightly un performant
+-use a space to give a selector context
+-the number after our ip is the port number upon which our web server is listening, so our web server is waitign for http requests on this port
+-use normalize.css style sheet to normalize the rendering of html elements accross different browsers. Load normalize.css Before your native stylesheet
+-we can select by: element, id, class or attribute
+-selecting by attribute is not really that common
+-we can't have mutiple elements with the same id, ids must be unique but we can have multiple elements with the same class
+-when selecting elements by attribute we can combine multiple conditions like a[href^="https"][href$=".com"] {}
+-we can use relational selectors to make our markup cleaner, but sometimes they can be fragile if you have to move elements around on the page, also these selectors are not as performant or fast as type, id or class selectors although the difference is negligible.
+Podstep57326
+
+px*FCp$06HvP
+
+
+-pseudo classes are not classes that we define, but its classes that are applied by default by the browser. We use them to target elements without the need of giving them a class first. The most common pseudo-classes are: first-child, first-of-type, last-child, last-of-type and nth-child. Pseudo-classes start with a single colon.
+-as a best practice whenever we use the hover psudeo selector we should also use the focus psedo selector for peole who use the tab key on the keyboard
+-psudo class and psudo element selectors are different
+-we use pseudo elements to style part of an element  ie: first letter
+-when we use a space its a decendant selector which means all of that type of element nested inside, it could be child or grandchild etc ie: nav li {} means all the li items nested inside the nav
+-we use pseudo classes  to style elements in a particular state ie: hover or visited
+-we use single colon for psudeo classes and double colon for psudo elements
+-we use psudo elements to style part of an element ie: first letter in contrast we use psudo classes to style elements in a particular state, ie: hover or visted
+
+
+-have to be careful with relational selectors as they are fragile and any changes in the location of elements in our code can break the styles
+-Typically, properties that are used for styling text such as text color, font, font size, etc are inherited. 
+
+
+
+
+-selector specificity means the browser will apply the selector that is the most specific(weight). id > class/attribute > element. If two selectors have the same specificity then the rule that comes last will be applied
+-use important keyword to make the rule take precendence and discard other rules in the specificity heirarchy, however the useage of this is considered bad practice as it can make your code messy and hard to maintain. We can get rid
+of the important keyword by writing a more specific selector, but don't go overboard with really long specific selectors because its hard to read and understand.
+
+
+-because of css inheritance, children of a parent element will inherit the css properties of the parent. There are exceptions to this such as the border property, this property is not inherited by child elements. 
+-generally speaking the properties that are about typography are inherited like font size, font-weight, color of text etc 
+-typography is all about fonts and their sizes
+-RGBA and HSLA values include an alpha channel used for transparency.
+-there is no right or wrong way to choose colors. Sometimes a hex value makes sense, sometimes a rgba (has opacity setting)
+
+
+
+
+- Gradients are images so they cannot be used as the value of background-color property. We can use them as the value of background-image: or background: properties.
+-if we use the system font stack we avoid FOUT (flash of unstyled text) and FOIT (flash of invisible text) also it has better performance as no font needs to be downloaded, on teh flip side the default font varies from one device to another.
+-the order of your css rules matters
+-best to size fonts using rem unit.
+-best to use rem for vertical margins. For headings the top margin should be greater then bottom margin because of law of proximity 
+-best to set line-height to unitless value of 1.5. This gets multipled byu the font-size of the current element so we dont need to change line-height when we modify font size.
+-apply negative letter spacing to heading so they look more compact.
+-ideal line length is 60-70 characters. We can do this by applying a width of 50ch.
+-we can use network throttling to simulate a slow connection and see how our app behaves.
+-broswer stores web page assets in a permanant storage called cache. This is located on the disk not memory.
+-WOFF and WOFF 2.0 are the recommended font file formats for the web because there more compressed and can be downloaded in less time
+-4 ways to represent colors in html: named colors, RGB, HSL and hexadecimal. RGB and HSL allow you to optionally pass an argument for transparency while hex doesn't.
+-wtth gradients we can create transitions beyween two or more colors.Gradients are technically images
+-border property is a shorthand property, because it takes the values and applies them to each side
+-border syntax goes clockwise, ie: top, right, bottom, left. If a value is missing it will take the width of the other side of the box ie: border-width: 10px 20px 10px 20px; is the same as border-width: 10px 20px;
+-if you have a square and make the border-radius: 100%; then we get a full circle
+-we can add shadows around elements using the box shadow property
+
+
+
+
+-box model is important css concept. Whenever the browser renders an element it puts that element inside an invisible box which has four parts or areas: content box, padding, border and margin.
+-padding is the space between the content and the border while margin the space outside the border. We use margin to space elements
+
+
+-if we have two elements next to each other, their margin gets collapsed into a single margin, this is what we call margin collapsing. ie: is <p> has 20px margin all round then another <p> below with same margin, then the top margin of
+the bottom <p> is collapsed into the bottom margin of the top <p>. So their margins are not cumlative, its not a total of 40px margin here like we may expect, but rather their margins are collasped. 
+-padding between two elements dont colapse, they are cumlative. Only margins collapse 
+-use margin to seperate elements and padding to add space between the border and content area of an element.
+
+
+-any padding or border we apply will increase the size of the box or element. The margin property however will not increase the size of the box or element. ie: if you have a div thats 100 x 100 px then adding a padding and border will increase the size.
+
+-width and height properties are applied to the content box of an element, so padding and border will increase the size of the visible box.
+
+
+
+
+
+-the width and height properties are applied to the content box, so padding and border add to the size of the element
+-box-sizing property is set to content-box by default, we can set it to border-box to make the entire box the size we specify
+-the universal selector ie: * can have some performance implications so use it sparingly. Rules defined within this selector will not apply to psudeo elements so you will have to explicitly set this. 
+ie: *, *::before, *::after {box-sizing: border-box;}
+
+
+-we tend to use bigger font sizes on tablet and desktop then on mobile
+-we can use width and height to set the size of our elements
+-by default the width and height properties are only applied to block level elements, so inline elements dont respect the width and height properties. To give inline elements a width and height set their display to inline-block
+-block level elements are always inserted on a new line and take up the entire horizontal space. Inline elements do not start on a new line and don't take up all the horizontal space
+-spaces between elements are normalized into a single space. If we dont want any space between elements then we have to place the elements directly next to each other
+-overflow will happen on fixed size containers when there is too much content inside
+
+-units of measurement fall into two categories: absolute and relative. Absolute is fixed its value doesnt change ie: px but relative units is relative to something else ie: % (reative to the size of the container) vw / vh (relative to the viewport) and em and rem (relative to the font size)
+
+-px is an absolute unit of measurement. The realtive units are: % (relative to the size of the container or parent element), vw & vh (relative to viewport), em & rem (relative to font size). What unit you use depends on what problem you 
+are trying to solve.
+-% is relative to the size of the parent element
+-relative values eventually get converted to pixel values by the browser (in the computed tab)
+
+
+-the unit we use depends on what were building
+-with relative units we can create layouts that adjust to screensizes and are more scaleable
+-by default the width of block level elements is 100% and their height is 0. If you add content inside the element the height will increase to fit the content
+-viewport units: we can size our elements according to the width or height of the viewport
+-use em and rem when we want to adjust the layout relative to the font-size
+-10em means 10 x the font size of the current element. If the element does not have a font size its inherited from its parent element
+-all browsers give the html element the base or default font size of 16pixels
+-10rem means 10 x the font size of the root element so html in this case which is 16px. so rem = root element (html)
+-we should set the font-size of our html elements to 62.5% in our css this will make our calculations with rem easier because the font-size is now 10px. If we do this then we need to make sure to set the body element font-size to 1.6rem to reset this back to the default size of 16px otherwise everything on the page will be sized small.
+-pixels is good for fixed size border so its doesn't expand with the screen
+
+-3 types of positioning: relative, absolute and fixed
+-relative positioning, we can position an element relative to its normal(default) position and it doesn not impact other elements on the page
+-absolute positioning, we can position an element relative to its container. The container must be positioned relatively to use abolsute position on the child element. absolute positioning does affect other elements on the page
+-whenever you use the zero number you dont need to specify a unit
+
+
+-when we absolute position element, that element is removed from the normal flow of the page, its like its on a different layer, so to the container or parent, its like the child doesn't exist. So the other elements around the element that was positioned, render on the page like the absolutely psoitioned element doesn't exist.
+-there is two ways to size positioned elements. By setting width and height properties and the other by setting left, right or top and bottom properties and setting the width to auto to allow the browser to auto resize the box.
+
+
+-fixed positioning: we can position an element relative to the viewport
+
+-subsquent elements will flow around an element that has been floated. Floated elements will be pushed to the right or left of its parent container
+-use ther clear property to clear a float and not make it flow around floated elements and have normal behaviour
+-parent elements dont see floated elements and have problems such as 'parent collapsing' where the floated element now goes outside the parent container
+
+
+
+-whenever we use floats we have to clear after, otherwise we run into layout issues
+-we shouldn't use floats to create layouts for modern websites, instead use flexbox or grid. They are are an old way of creating layouts and should be used just to maintain legacy applications
+-flexbox is a layout method for laying out elements in one direction like in a row or column
+-to align items in flex we use axes. Two axes: primary and secondary. For rows the primary axes will be the horizontal axes and the secondary axes will be vertical axes. For column the primary axes will be the vertical axes and the secondary the horizontal axes.
+-to align items in flex there is two properties we need to remember: justify-content (along primary axes) and align-items (along the secondary axes)
+-block level elements like div containers, get tall enough to fit its children
+-the default behaviour of flex containers are the children get smaller to fit on one line, we can change this by setting flex-wrap
+-flexbox has both container and item properties
+
+
+-grid is a layout method for laying out multiple rows or colums.
+-for grid: if you see the word content in the property it means the entire grid but if you see the word items, it means the item in the grid.
+-grid: As a best practice prefer setting fractions (fr) as a unit of measurement instead of % for setting sizes of rows and columns. using % cna get tricky because we can get some overflow 
+-for aligning items in grid: justify-items (along the horizontal axis) and align-items (along the vertical axis)
+-a lot of properties are set in the container not the items for flex and grid but styles that are applied to their specific items like placement are done on the items
+-repeat function can help reduce duplication in your code
+
+-display property hides elements as if it was never there, in contrast visibility will hide an element but still show the allocated space for it
+
+-with media queries we can provide different styles for different devices depending on their features such as screensize, orientation etc
+-768px, 1024px and 1440px are good media query breakpoints for tablet, laptop and desktop respectively, anything smaller than tablet should be mobile 
+by using media queries with relative units we can build responsive websites
+-with media query we identify breakpoints, points at which our design breaks ie: looks bad, then we write styles for specific devices that are wider then our break point. ie: @media screen and (min-width: 600px)
+-web safe fonts are available on most users computers and are listed when you press ctrl space on the font-family property. 
+-The font stack: the browsers checks the list if it is installed on the users computer
+-by applying the font-family property in the body we can use inheritance so all the elements get the same font from paragraphs to links
+-font files come in different formats like images and videos but we usually use WOFF and WOFF 2.0 for font files that are downloaded by the client
+-a problem with custom fonts is the user may encounter what we call a 'flash of unstyled text' or fout. This can cause layout shifts on the page
+-four ways to set fonts: websafe fonts, system font stack (default font on the OS of users machine), custom fonts (embeded) or a font service like google (https)
+-to embed font, we we register the font using the font face rule at top of our style sheet then we can just that font anywhere in our stylesheet
+-we can think of params as palceholder variables
+-an apersand in a QSP(query string param) is used to seperate multiple params
+-font services like google fonts can still have fout
+-system font stack can boost performance because the browser doesnt have to download any font files, so there is no FOUT (only way to eliminate)
+-different os have different default fonts so when using the system font stack your font will look different on different computers
+-websafe fonts are available on almost every computer but system fonts are more modern and are used by todays OS so they look better
+-we dont want duplication in our code. Abide by DRY: dont repeat yourself
+-dont use pixels to set font size because pixels are not consistent accross devices, a font size on windows will look smaller on mac because pixels are smaller to fit more on the screen because of retina display. The best practice is to set the font-size relative to the html element so use rem.
+-law of proximity: objects that are close together appear to be related. So as rule of thumb the top margin should be greater than bottom margin for our headings
+-a good rule is to set your line height 1.5, this is a multipler so it will always be 1.5 x the font-size
+-ideal line length is between 50 - 70 characters
+-ch is another unit in css which is shortt for character. It is relative to the width of the zero character
+-word spacing of 1.5rem seems to be a standard value
+
+-jpg does not support transparency or animations
+-two types of images on the web raster which is made up with pixels and vector which is mathmatical lines and curves
+-raster: jpg, gif, png and webP
+-vector: svg
+-no webp support for IE currently
+-if we need transparency or animations then we have to use gif, webp or PNG as jpeg doesnt support transparency and animations
+-in html we have 2 types of images content images and background images
+-if we increase the original size of a raster image it comes blurry because we dont have extra details to fill those extra pixels being used. We only have the original information. SVG files dont have this problem
+-../ will go 1 level up
+
+-block level elements: their height by default is 0, so they only get tall enough to fit their content
+-we cannot set width n height to inline element unless we set display to inlne-block
+-using css sprites we can combine multiple images into one image so the client only sends a single http request to download all the images. ie: if we had 5 images that 5 seperate http requests sent to the server, but with css sprites we can combine the 5 images and now its only a single request. We should use this approach for logos and icons. Don't put all images in a single file as the file will get too large. Also this apprach is not flexible, we need to edit the sprite when we need to change images. 
+-with pseudo class selectors we can select an element in a particular state ie: .meal:hover {filter: grayscale(70%) blur(3px);}
+-data urls are another optimisation technique for reducing the number of http requests but there are a number of problems, mosh does not use them.
+-images that are used purely for decoration like a line break, set the alt attribute to an empty string
+-now days there are more high density screens with more pixels, we need to take this into account when displaying images.
+-for retina displays we need to provide a seperate version of the normal image which is twice as big and display it at the original size.
+-pysical resolution: actual pixels, logical resolution: how the pixels behave - this is what css is based on, DPR: device to pixel ratio, ie 2 or 3 - phyiscal / logical, high density: screens with a DPR > 1 - so it means more physical pixels than logical pixels.
+-when resizing images for high density screens always start with the biggest size. If we want our css image to be 400px width (logical pixels) on a device with DPR of 2 we need to supply a 800px images and for DPR of 3 we need to supply a 1200px image
+-use the srcset attribute to provide different versions of an image for high density screens. We dont need to provide different versions for every single image, thats overkill, only use for your high quality hero images
+-resolution switching: with the srcset attribute we do techniques like responsive image serving to serve appropriately sized images depending on the users device. For a 1920x1311 background hero image, the browser has to download the original file then resize it according to the screen, this results in wasted network bandwidth, device resources, server resources and wasted bytes as the browser has to download a larger image than its actually displaying. 
+-webp is a lot smaller size than jpg or png
+-we use svg files for logos, icons, backgrounds and simple graphics
+
+-QSP = query string parameter: they are the key/values pairs in a url seperated by & with = sign to divide key and value
+-webp is smaller size image but IE doesn't support it. To support webP we can use the picture element with multiple sources. The picture element should always contain an img element otherwise the img is not shown
+-we can supply different versions of an image depending on the device
+-art direction is showing a zoomed in or cropped image depending on different screen sizes. For this we should use a picture element with multiple sources. Each source should contain a media condition and a srcset. The browser will pick the first source whose media condition matches.
+-often we use svg files for logos, icons or simple graphics
+-we can also use font icons for our icons, ie: instead of letters abcd, we have icons - fontawesome
+-form controls are the input fields inside a form
+-labels make your forms more accessible and useable
+-when it comes to formatting your stylesheet its good to have more general rules at the top and more specialized rules at the bottom
+-in html, if we prefix our attribute with data- we can create our own custom attribute
+-we can implement a suggestion list in html by using the datalist element with multiple option elements inside. Be sure to turn autocomplete to off so the native autocomplete in the browser doesn't clash with what we have implemented here
+-we can create our own custom attribute with 'data-' ie: data-value="1" then later with js we can read the value of this attribute and submit it to the server
+-if we define our own rules for datalist or option elements the styles wont be applied, the browsers default styles will take over because these elements have limited styling capabilities. We can hoever use js to override this.
+-use the id attribue for form elements when you want to associate the element with a label
+-use the name attribute when we want to submit this form to the server
+-checkbox for multiple items but radio for only a single item to be selected
+-we can use the fieldset element to group related fields (or inputs)
+
+
+-use fieldset tag to group related fields in your forms
+-we often use hidden fields to store the id of the content being edited
+-always validate a form before submission
+-to submit a form set the action and method attibutes on the form element and make sure your input fields have name attribute set
+-when we submit forms using the post method, the form values are included in the body of the request so they are hidden from the user. We use this method most of the time when submitting forms
+-wehn we submit form using the get method the form values are appended to the target url, they are included in the url as query string params. We use this when we want to book mark the resulting url with query string params
+-using the transform property we can apply one or more transformations to an element
+-using the transition property we can animate one or more properties
+-transformation functions allow you to animate html elements
+-the order of transformation functions matter
+-the z axis is a line that comes from the screen towards our eyes
+-to create custom animations we define a set of keyframes, each keyframe includes a list of styles to be applied at a given moment in time
+-avoid direct child selectors ie: > as much as possible as it can make our styles fragile
+-split you css code into sections with comment at top like basic styles, forms, typography, nav-bar etc
+-css best practices: 1. follow consistent naming convention, 2. create logical sections in your stylesheet, 3. avoid over-specific selectors, 4. avoid !important keyword, 5. sort css properties, 6. take advantage of style inheritance
+7. extract repetitive patterns, 8. avoid repitition in your code (keep it DRY)
+-css variables are also called custom properties, they can help keep your code dry. define them at the top of the html element by doing :root {} they start with --. Then use the var() function in your other rules to access the variable
+-two principals of object orientated css: 1. seperate container and content 2. seperate structure from skin
+-BEM is a naming convention short for block element modifier. The idea of BEM is to think of our webpage as a bunch of blocks or components. These blocks can contain elements and the blocks can be modified. A block can contain elements or other blocks. We seperate with two underscores in the naming convention for blocks and elements. ie: class="card__header" (block then element) then for modifer we add an extra class with the block name two hypens the the skin name, ie: class="card card--popular" so we use double hypens to seperate a block from a modifier and two underscores to seperate a block from an element.
+-:root psuedo class selector matches the html element, this is where where we define our css variables. Properties defined here will get inherited by all elements in the DOM. We prefix these variables with --
+
+-we should split our webpages into css components and elements and build them out seperately. ie: navbar, button, hero banner, card component, quote and testimonial components, footer. We can have vairations of these compnents.
+This is called modular or component based css, the idea of module css is to breakdown a page into reuseable components and then compose those components together to build a complex layout
+-The color pallete should include a primary, secondary and accent color
+-everytime we import a new font we increase the cost of downloading our page
+-margin collapsing: when we have two margins in the same place the margin with the greater value will take precedence
+-sometimes fonts can include their own space above and below each character, take this into account when setting margin and padding
+-1024px is a standard length to describe desktop and laptop screens
+- we should try to avoid nesting as much as possible as we will end up with overly specific selectors and that can make our code fragile
+-often times there is default styles like margins and padding applied by the browser that we need to clear to get the styles we want
+-we can restyle svg files using css
+-in BEM we use a single hyphen to seperate multiple words
+-width and heoght propertties have no affect on inline elements
+-to submit a form you should set the action and the method of the form, action attribute specifies where the data is sent and the method attribute specifies how the data is sent ie: GET or POST.
+
+-use the bottom up approach when building web pages where we build the components first them combine them together to build complex layouts, then we can mix and combine them change skins, structure etc
+-elements in BEM cannon't live outside of its block
+-by default overflow is visible
+-the M in bem (modifier) usually referes to a skin or appearance class
+-if we want to use abolute positioning on an element then the parent of that element should be relatively positioned
+
+-relative position wont affect other elements on the page
+-to make an image responsive set the width to 100%, this will make it 100% of its container and when the container resizes so will the image.
+
+-when we put items in a flex container, by default they shrink so we can put the items in one line
+-use double class selector by not including a space in our stylesheet
+
+-when setting more than one class to an element, the order matters, so we start with generic classes then apply more specific classes to override the styles of the generic classes
+
+-we wrap an image with picture element to provide different types of sources
+-semantic elements are more descriptive and meaningful so whereever possible we should use these elements as its better for SEO
+-article element can be any independant self contained piece of content
+-try and use semantic elements instead of divs and spans moving forward. like articlem figurem figcaption, time, mark, header, nav, main, section, aside, footer etc
+-with the section element we can group related content
+-use main element for the main content of the page
+-use header element to represent introductionary content
+-footer element can be used in the same way above 
+-aside for content not directly related to the main content
+
+-most web pages have at least 3 building blocks: header, main and footer
+-divs have no meaning you are better using semantic markup for better SEO and code readability
+
+-a css variable is called a custom property
+
+-a section element is a generic container but an article is an independent distribuitable piece of content, ie: a section doesn't make sense on its own, it needs the context of the other sections and elements on the page. This is the difference between these two elements
+
+-whenever you face issues in your applications you should always try to isolate the problem
+
+-we have a few meta elements for the open graph protocol: This gives a preview of the page to social media platforms when sharing
+
+-In your css try not to rely on the type of your elements (section, ul etc) this will allow you to make changes in your markup like change elements around and it won't break your styles
+
+-before we deploy our website we need to prepare it for production, we do this using build tools. Build tools combine multiple js, css files to reduce the number of http requests from clients, minify our css, js code to reduce size and optimise our images
+
+-build-tools include webpack, rollup and parcel. Mosh recommends parcel
+
+-we list folders and files in gitignore to not include them into our repository when we commit and push remote. (those folders and files will not be included in the git icon in vscode)
+
+-use @import directive to import a stylesheet into your current stylesheet. ie: you can do this to import normalize.css. This will reduce the number of requests from the client and help to eliminate render blocking resources
+
+
+#lQdsia7lqEUF2&D
+
+-----
+
+-room too cold
+-small soaps
+-lift doesn't work
+-sauna cold
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+<img
+      sizes="(max-width: 1440px) 100vw, 1440px"
+      srcset="
+        images/hubble_kqf9li/hubble_kqf9li_c_scale,w_320.jpg   320w,
+        images/hubble_kqf9li/hubble_kqf9li_c_scale,w_928.jpg   853w,
+        images/hubble_kqf9li/hubble_kqf9li_c_scale,w_1272.jpg 1228w,
+        images/hubble_kqf9li/hubble_kqf9li_c_scale,w_1440.jpg 1440w
+      "
+      src="hubble_kqf9li_c_scale,w_1440.jpg"
+      alt=""
+    />

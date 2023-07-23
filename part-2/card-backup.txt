@@ -1,0 +1,106 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+          asperiores sit veniam temporibus dolor, distinctio voluptatem neque,
+          dicta necessitatibus ab debitis, doloribus doloremque enim! Sed labore
+          assumenda quos facilis. Tempore!
+        </p>
+      </section>
+      <footer>
+        <img src="17.jpg" alt="" />
+        <p>Jenny Smith</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+
+CSS:
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  width: 500px;
+  border-radius: 30px;
+  background: whitesmoke;
+  overflow: hidden;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px 30px #ccc;
+  padding-bottom: 60px;
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card:hover img {
+  transform: scale(1.15);
+}
+
+p {
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  word-spacing: 2px;
+  letter-spacing: 0.65px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(116, 214, 144);
+  background: linear-gradient(
+    30deg,
+    rgba(116, 214, 144, 1) 13%,
+    rgba(92, 191, 187, 1) 89%
+  );
+}
+
+footer > p {
+  color: white;
+}
+
+img {
+  float: left;
+  width: 60px;
+  border-radius: 30px;
+  border: 5px solid white;
+  margin-left: 4rem;
+  margin-top: 1.3rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+section {
+  margin-bottom: 40px;
+}

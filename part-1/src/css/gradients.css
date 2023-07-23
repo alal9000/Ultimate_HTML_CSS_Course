@@ -1,0 +1,7 @@
+.box {
+  width: 600px;
+  height: 200px;
+  /* background: linear-gradient(45deg, dodgerblue, yellow, tomato); */
+  background: rgb(68,60,201);
+  background: linear-gradient(30deg, rgba(68,60,201,1) 0%, rgba(255,103,21,1) 90%);
+}

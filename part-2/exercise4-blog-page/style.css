@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+body p {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+
+h1, h2, h3 {
+  margin: 5rem 0 2rem;
+  color: black;
+  line-height: 1.1;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 5.61rem;
+}
+
+
+h2 {
+  font-size: 4.209rem;
+}
+
+h3 {
+  font-size: 3.157rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+ol li {
+  margin-bottom: 2rem;
+}
